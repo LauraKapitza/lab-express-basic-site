@@ -7,6 +7,7 @@
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
+  font-size: 12px;
 }
 
 /* -------------------- */
@@ -14,14 +15,16 @@ body {
 /* -------------------- */
 
 h1 {
-  font-size: 4em;
+  font-size: 5em;
   margin: 0;
 }
 
 h2 {
-  font-size: 2.5em;
-  font-style: italic;
-  font-weight: 200;
+  background-color: rgba(47, 123, 50, .8); 
+  border-radius: 5px; 
+  color: white;
+  font-size: 3.5em; font-style: italic; font-weight: 300;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -48,9 +51,21 @@ header a,
 
 #about,
 #works {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+#about > a:hover,
+#brand > a:hover,
+#works > a:hover {
+  color: #da6588;
+}
+
+#about > a:active,
+#brand > a:active,
+#works > a:active {
+  color: #bc0e39;
 }
 
 #brand {
@@ -78,23 +93,41 @@ main {
   width: 80vw; height: auto;
 }
 
-.textContainer {
+.text-container {
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 10px;
   width: 70vw;
 }
 
-.textContainer p {
+.text-container p {
   font-size: 1.25em;
   font-weight: 300;
   line-height: 2;
 }
 
-.textContainer > p:last-child {
+.text-container > p:last-child {
   font-size: 1em;
 }
 
-.image {
+.center-image {
+  display: block;
   margin: 0 auto;
-  width: 70vw; height: auto;
+  max-width: 50vw; height: auto;
+}
+
+#about-image,
+#works-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; align-items: center; justify-content: center;
+  max-width: 80vw; height: 40vh;
+  margin: 0 auto;
+}
+
+#about-image {
+  background-image: url(../images/frida-pics.png);
+}
+
+#works-image {
+  background-image: url(../images/kahlo-paintings.jpeg);
 }
